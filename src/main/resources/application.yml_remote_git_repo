@@ -1,0 +1,26 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:new-innovations-team/spring-cloud-config-repo.git
+		  ignore-local-ssh-settings: true
+		  strict-host-key-checking: false
+		  search-paths: 
+		  - configuration/{application}/
+		  - configuration/
+		  private-key: |
+						-----BEGIN RSA PRIVATE KEY-----
+						-----END RSA PRIVATE KEY-----
+    active: native
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 5
+    service-url:
+     default-zone: http://localhost:8761/eureka/
