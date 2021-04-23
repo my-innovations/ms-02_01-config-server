@@ -14,9 +14,10 @@
 	<properties>
 	
 		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		
 		
 		<!-- spring cloud releases -->
 		<!-- <spring-cloud.version>Angel.SR3</spring-cloud.version> -->
@@ -93,7 +94,7 @@
 	</dependencyManagement>
 
 	<build>
-		<finalName>config-server</finalName>
+		<finalName>config-server-app</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
